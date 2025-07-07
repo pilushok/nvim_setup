@@ -71,4 +71,14 @@ return {
     "nvim-neotest/nvim-nio"
   },
 
+  {
+    "mason-org/mason-lspconfig.nvim",
+    opts = {
+      ensure_installed = {
+        "asm-lsp",
+        "pyright"
+      }
+    }
+  }
+
 }
