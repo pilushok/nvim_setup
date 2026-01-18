@@ -66,3 +66,6 @@ vim.o.confirm = true
 
 -- optionally enable 24-bit colour
 vim.opt.termguicolors = true
+
+vim.notify("Loading nvim.options success", vim.log.levels.INFO)
+

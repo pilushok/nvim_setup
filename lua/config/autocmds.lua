@@ -19,3 +19,5 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.hl.on_yank()
   end,
 })
+
+vim.notify("Loading nvim.autocommands success", vim.log.levels.INFO)
