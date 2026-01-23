@@ -56,6 +56,7 @@ return {
         -- <c-e>: Hide menu
         -- <c-k>: Toggle signature help
         --
+        ['<CR>'] = { 'select_and_accept', 'fallback' },
         -- See :h blink-cmp-config-keymap for defining your own keymap
         preset = 'default',
 
