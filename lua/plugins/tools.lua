@@ -8,6 +8,14 @@ return {
     -- this is equivalent to setup({}) function
 },
   {
+    'windwp/nvim-autopairs',
+    event = 'InsertEnter',
+    config = true,
+    -- use opts = {} for passing setup options
+    -- this is equivalent to setup({}) function
+  },
+
+  {
     'jake-stewart/multicursor.nvim',
     branch = '1.0',
     config = function()

@@ -33,11 +33,24 @@ return {
         lua = { 'stylua' },
         cpp = { 'clang_format' }, -- For C++ files
         c = { 'clang_format' }, -- For C files
+        make = { 'mbake' },
+
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
+      },
+      formatters = {
+        mbake = {
+          command = 'mbake',
+          stdin = false, -- mbake needs file input
+        },
+        clang_format = {
+          prepend_args = {
+            '-style=file', -- This makes clang-format look for .clang-format file
+          },
+        },
       },
     },
   },
