@@ -215,7 +215,8 @@ return {
         clangd = {},
         -- gopls = {},
         pyright = {},
-        -- rust_analyzer = {},
+        -- NOTE: rust_analyzer is set up separately at the end of this file so it uses
+        -- the system rust-analyzer from rustup (~/.cargo/bin) instead of a Mason one.
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -273,6 +274,15 @@ return {
             require('lspconfig')[server_name].setup(server)
           end,
         },
+      }
+
+      -- Rust: use the system rust-analyzer installed via rustup (~/.cargo/bin)
+      -- instead of the Mason-managed one, so it always matches the local toolchain.
+      -- `cmd` is resolved from PATH and is the same as the lspconfig default;
+      -- it is spelled out here to make the intent explicit.
+      require('lspconfig').rust_analyzer.setup {
+        cmd = { 'rust-analyzer' },
+        capabilities = capabilities,
       }
     end,
   },

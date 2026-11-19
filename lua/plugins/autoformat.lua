@@ -31,6 +31,7 @@ return {
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
+        rust = { 'rustfmt' }, -- Uses rustfmt from the rustup toolchain (~/.cargo/bin)
         cpp = { 'clang_format' }, -- For C++ files
         c = { 'clang_format' }, -- For C files
         make = { 'mbake' },
