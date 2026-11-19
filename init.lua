@@ -2,4 +2,4 @@ require 'config.global'
 require 'config.options'
 require 'config.keymaps'
 require 'config.autocmds'
-require 'config.lazy'.setup()
+require('config.lazy').setup()

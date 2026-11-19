@@ -1,1 +1,1 @@
-print("Checking health from custom file")
+print 'Checking health from custom file'

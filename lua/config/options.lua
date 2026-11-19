@@ -17,7 +17,7 @@ vim.o.showmode = false
 
 -- Sync clipboard between OS and Neovim.
 vim.schedule(function()
-  vim.o.clipboard = 'unnamedplus'
+    vim.o.clipboard = 'unnamedplus'
 end)
 
 -- Keep indentation when wrapping lines, making wrapped text align with original indentation
@@ -67,5 +67,4 @@ vim.o.confirm = true
 -- optionally enable 24-bit colour
 vim.opt.termguicolors = true
 
-vim.notify("Loading nvim.options success", vim.log.levels.INFO)
-
+vim.notify('Loading nvim.options success', vim.log.levels.INFO)
